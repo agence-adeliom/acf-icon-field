@@ -88,7 +88,11 @@ const App = ({name = '', value = null, exclude = '[]'}) => {
     }, [search]);
 
     useEffect(() => {
-        document.querySelector(`input[name="${name}"]`).value = JSON.stringify(selected);
+        const input = document.querySelector(`input[name="${name}"]`);
+        if(input){
+            input.value = JSON.stringify(selected);
+            input.dispatchEvent(new Event('change', { 'bubbles': true }))
+        }
     }, [selected]);
 
     return (
