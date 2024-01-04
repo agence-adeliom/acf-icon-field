@@ -11,7 +11,7 @@
   "author": "Adeliom",
   "license": "MIT",
   "devDependencies": {
-    "esbuild": "0.19.10"
+    "esbuild": "0.19.11"
   },
   "dependencies": {
     "@agence-adeliom/awc": "^1.6.8",
