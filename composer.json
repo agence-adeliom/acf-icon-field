@@ -1,0 +1,26 @@
+{
+    "name": "agence-adeliom/acf-icon-field",
+    "version": "1.0.0",
+    "description": "An advanced icon field for ACF",
+    "type": "wordpress-plugin",
+    "license": "MIT",
+    "homepage": "https://github.com/agence-adeliom/acf-icon-field",
+    "authors": [
+        {
+            "name": "Arnaud RITTI",
+            "email": "arnaud.ritti@adeliom.com"
+        }
+    ],
+    "keywords": [
+        "wordpress",
+        "acf"
+    ],
+    "support": {
+        "issues": "https://github.com/agence-adeliom/acf-icon-field/issues",
+        "forum": "https://github.com/agence-adeliom/acf-icon-field/discussions"
+    },
+    "require": {
+        "php": ">=8.0",
+        "composer/installers": "~1.0 || ~2.0"
+    }
+}

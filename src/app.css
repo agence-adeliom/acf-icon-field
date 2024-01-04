@@ -1,0 +1,94 @@
+.icon-item {
+    padding: 0.25rem;
+}
+
+.icon-item > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    flex-grow: 1;
+    font-size: 0.75rem;
+    color: var(--awc-color-neutral-800);
+    gap: 0.75rem;
+    padding: 1rem 0.5rem 0.5rem 0.5rem;
+    border: 1px solid var(--awc-input-border-color-base);
+    border-radius: 0.25rem;
+    height: 100%;
+    cursor: pointer;
+    user-select: none;
+}
+.icon-item:hover > div {
+    background-color: var(--wp-admin-theme-color);
+    color: white;
+}
+.icon-item > div > awc-icon {
+    font-size: 2rem;
+}
+.icon-item > div > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    overflow: hidden;
+}
+.icon-item.icon-item--active > div {
+    border: var(--wp-admin-border-width-focus) solid var(--wp-admin-theme-color);
+}
+.icon-item.icon-item--active > div > awc-icon {
+    color: var(--wp-admin-theme-color);
+}
+
+.icon__dialog{
+    --width: 50rem;
+}
+
+.icon__dialog::part(close-button__base):hover{
+    color: var(--wp-admin-theme-color);
+}
+.icon__dialog .icon__dialog--content {
+    display: grid;
+    grid-template-columns: 12rem 1fr;
+    gap: 0.75rem;
+}
+
+.icon__dialog .icon__dialog--content awc-tree-item::part(item--selected) {
+    border-inline-start-color: var(--wp-admin-theme-color);
+}
+
+.icon__list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+.icon__list awc-input{
+    --awc-input-border-color-focus: var(--wp-admin-theme-color);
+}
+.icon__list .icon__list--grid{
+    margin: 0 -0.25rem;
+}
+
+.icon__selected{
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.5rem;
+    border: 1px solid var(--awc-input-border-color-base);
+    border-radius: 0.25rem;
+}
+.icon__selected awc-icon {
+    font-size: 2rem;
+}
+.icon__selected span {
+    flex-grow: 1;
+}
+.icon__selected awc-icon-button::part(base):hover {
+    color: var(--awc-color-danger-600);
+}
+
+
+
