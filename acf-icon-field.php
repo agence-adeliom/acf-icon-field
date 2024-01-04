@@ -46,7 +46,7 @@ function adeliom_include_acf_field_icon_field() {
         $acf_icon_field_registry->addLibrary(new ACF_Icon_Default());
     }
 
-    if($registerFontAwesome = apply_filters("acf/icon_field/register_font-awesome", true)){
+    if($registerFontAwesome = apply_filters("acf/icon_field/register_font-awesome", 'free')){
         if($registerFontAwesome === "pro"){
             $acf_icon_field_registry->addLibrary(new ACF_Icon_Font_Awesome_Pro());
         }else{

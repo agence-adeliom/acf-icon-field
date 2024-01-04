@@ -35,6 +35,10 @@ class ACF_Icon_Font_Awesome_Free extends \ACF_icon_library
         ];
         $this->setSubsets($subsets);
 
+        if(!apply_filters('acf/icon_field/use_cache', true)){
+            delete_transient('acf/font_awesome_free_icons');
+        }
+
         if ( false === ( $font_awesome_icons = get_transient( 'acf/font_awesome_free_icons' ) ) ) {
             $font_awesome_icons = array_reduce(self::get_icons_from_api(), static function ($icons, $icon) use ($subsets) {
                 foreach ($icon['familyStylesByLicense']['free'] as $style) {

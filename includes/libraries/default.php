@@ -20,6 +20,10 @@ class ACF_Icon_Default extends \ACF_icon_library
 
         $this->setResolver('https://cdn.jsdelivr.net/npm/@agence-adeliom/awc@latest/dist/assets/icons/{{name}}.svg');
 
+        if(!apply_filters('acf/icon_field/use_cache', true)){
+            delete_transient('acf/awc_default_icons');
+        }
+
         if ((false === ($awc_icons = get_transient('acf/awc_default_icons'))) && $icons = self::get_icons_from_api()) {
             $awc_icons = array_reduce($icons, static function ($icons, $icon) {
                 $icons[] = [
