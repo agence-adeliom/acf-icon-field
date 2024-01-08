@@ -6,7 +6,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 require_once  __DIR__ . '/class-adeliom-acf-field-icon-library.php';
 
-class ACF_icon_registry implements \Serializable, \JsonSerializable
+class ACF_icon_registry implements \JsonSerializable
 {
     private static $instance;
     private $data;
@@ -60,19 +60,9 @@ class ACF_icon_registry implements \Serializable, \JsonSerializable
         return $this->toArray();
     }
 
-    public function serialize(): array|string|null
+    public function jsonSerialize(): mixed
     {
         return $this->__serialize();
-    }
-
-    public function jsonSerialize()
-    {
-        return $this->__serialize();
-    }
-
-    public function unserialize(string $data)
-    {
-        throw new \Exception('Not implemented');
     }
 
 

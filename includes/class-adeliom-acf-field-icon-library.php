@@ -4,7 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
-class ACF_icon_library implements \Serializable, \JsonSerializable
+class ACF_icon_library implements \JsonSerializable
 {
     private string $name;
     private string $library;
@@ -110,18 +110,8 @@ class ACF_icon_library implements \Serializable, \JsonSerializable
         ];
     }
 
-    public function serialize(): array
+    public function jsonSerialize(): mixed
     {
         return $this->__serialize();
-    }
-
-    public function jsonSerialize(): array
-    {
-        return $this->__serialize();
-    }
-
-    public function unserialize(string $data)
-    {
-        throw new \Exception('Not implemented');
     }
 }
