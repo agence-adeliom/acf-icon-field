@@ -166,9 +166,11 @@ class adeliom_acf_field_icon_field extends \acf_field {
     public function format_value( $value, $post_id, array $field ) {
         if($value) {
             try {
-                $icon = json_decode($value);
-                $icon->key = $icon->id;
-                $icon->id = $icon->prefix ? $icon->prefix . '-' . $icon->id : $icon->id;
+                $icon = json_decode($value, false);
+                if($icon instanceof \stdClass) {
+                    $icon->key = $icon->id;
+                    $icon->id = $icon->prefix ? $icon->prefix . '-' . $icon->id : $icon->id;
+                }
             }catch (\Exception){
             }
         }
