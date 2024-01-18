@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.2](https://github.com/agence-adeliom/acf-icon-field/compare/v1.0.1...v1.0.2) (2024-01-18)
+
+
+### Bug Fixes
+
+* Dump PHP version and remove deprecated ([de82651](https://github.com/agence-adeliom/acf-icon-field/commit/de82651c339cee648a5afd31f2b90c6ac86d98fd))
+* object PHP ([c94a63f](https://github.com/agence-adeliom/acf-icon-field/commit/c94a63f1bea37585723be4fe202a1913c1d0e586))
+
 ## [1.0.1](https://github.com/agence-adeliom/acf-icon-field/compare/v1.0.0...v1.0.1) (2024-01-04)
 
 
