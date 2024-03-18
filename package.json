@@ -16,7 +16,7 @@
   "dependencies": {
     "@agence-adeliom/awc": "^1.6.8",
     "js-search": "^2.0.1",
-    "preact": "^10.19.3",
+    "preact": "^10.19.7",
     "react": "npm:@preact/compat",
     "react-dom": "npm:@preact/compat",
     "react-virtualized": "^9.22.5"
